@@ -4,7 +4,7 @@ class AirDevBrake
     @@dev, @@air = dev, air
 
     Slack.configure do |config|
-      config.token = "xoxb-116923201861-UZWuipiNsDKygGaiBzN9CCBR"
+      config.token = "SLACK_BOT_TOKEN"
     end
     @@client = Slack::Web::Client.new
     @@dev_user, @@air_user = @@dev.first, @@air.first
@@ -62,25 +62,25 @@ end
 
 
 dev=[
-  '@bank.lee',
-  '@richardkettle ',
+  '@lee',
+  '@richard ',
   '@jacob',
-  '@francesca',
-  '@georgi',
-  '@richard',
-  '@nicola',
-  '@adam'
+  '@karen',
+  '@sarah',
+  '@rich',
+  '@bob',
+  '@john'
 ]
 
 air=[
-  '@nicola',
-  '@adam',
-  '@georgi',
-  '@richard',
-  '@francesca',
+  '@john',
+  '@bob',
+  '@rich',
+  '@sarah',
+  '@karen',
   '@jacob',
-  '@richardkettle',
-  '@bank.lee'
+  '@richard',
+  '@lee'
 ]
 
 AirDevBrake.new(dev, air)
